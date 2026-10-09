@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minghai Shi — Medical AI Researcher</title>
+  <meta name="description" content="Minghai Shi — Medical AI Researcher at Shanghai AI Laboratory. Life speaks in patterns. We teach machines to listen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="nav">
+    <a class="nav__logo" href="#hero">MINGHAI&nbsp;SHI<span class="nav__pipe">|</span><span class="nav__role" data-i18n="hero.role">Medical AI Researcher</span></a>
+    <nav class="nav__links">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#news" data-i18n="nav.news">News</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <button id="lang-toggle" class="theme-toggle" aria-label="Switch language">中文</button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="切换浅色/深色主题">方案A</button>
+    </nav>
+  </header>
+
+  <main class="snap">
+
+    <!-- 首屏 -->
+    <section class="hero" id="hero">
+      <video class="hero__video" autoplay muted loop playsinline poster="">
+        <source src="assets/hero-neural.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">
+          <span class="reveal">Life speaks</span>
+          <span class="reveal">in patterns.</span>
+          <span class="reveal hero__rule"></span>
+          <span class="reveal">We teach machines</span>
+          <span class="reveal">to listen.</span>
+        </h1>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- 关于 -->
+    <section class="section" id="about">
+      <div class="section__inner">
+        <p class="section__index">01</p>
+        <h2 class="section__title reveal" data-i18n="about.title">About</h2>
+        <p class="section__lead reveal" data-i18n="about.lead">
+          Medical AI researcher at Shanghai AI Laboratory, working on AI for real-world clinical practice:
+        </p>
+        <ul class="focus">
+          <li class="reveal" data-i18n="about.i1">Multimodal AI-assisted decision-making in endoscopic surgery</li>
+          <li class="reveal" data-i18n="about.i2">Integrated multimodal intelligent screening &amp; diagnosis for cervical cancer</li>
+          <li class="reveal" data-i18n="about.i3">Drug–dosage co-decision prediction and evolution models for metabolic comorbidities</li>
+        </ul>
+
+        <h3 class="block__label reveal" data-i18n="about.xp">Experience</h3>
+        <ul class="xp">
+          <li class="xp__item reveal">
+            <img class="xp__logo xp__logo--tall" src="assets/logo-shailab.png" alt="Shanghai AI Laboratory" />
+            <div>
+              <p class="xp__role"><span data-i18n="xp.shlab.role">Algorithm Researcher · Medical Intelligence Center</span><span class="xp__now" data-i18n="xp.now">Current</span></p>
+              <p class="xp__org">Shanghai AI Laboratory</p>
+              <p class="xp__date" data-i18n="xp.shlab.date">2026.05 – Present</p>
+              <p class="xp__desc" data-i18n="xp.shlab.desc">Developing and optimizing multimodal medical AI algorithms that integrate medical imaging and clinical information for intelligent diagnosis.</p>
+            </div>
+          </li>
+          <li class="xp__item reveal">
+            <img class="xp__logo xp__logo--mono xp__logo--tall" src="assets/ubisoft-logo.svg" alt="Ubisoft La Forge" />
+            <div>
+              <p class="xp__role"><span data-i18n="xp.laforge.role">Research Student</span></p>
+              <p class="xp__org">Ubisoft La Forge · Ubisoft China</p>
+              <p class="xp__date" data-i18n="xp.laforge.date">2025.10 – 2026.04</p>
+              <p class="xp__desc" data-i18n="xp.laforge.desc">Optimized game asset production by training customized DiT-based generative models, with automated data curation and model quantization for high-performance generation.</p>
+            </div>
+          </li>
+          <li class="xp__item reveal">
+            <img class="xp__logo" src="assets/logo-astar-web.png" alt="A*STAR" />
+            <div>
+              <p class="xp__role"><span data-i18n="xp.astar.role">Algorithm Engineer Intern</span></p>
+              <p class="xp__org">A*STAR</p>
+              <p class="xp__date" data-i18n="xp.astar.date">2025.08 – 2025.10</p>
+              <p class="xp__desc" data-i18n="xp.astar.desc">Developed a multimodal 3D scene understanding framework for embodied AI, integrating 2D visual priors into 3D segmentation to enhance interactive affordance perception.</p>
+            </div>
+          </li>
+        </ul>
+
+        <h3 class="block__label reveal" data-i18n="about.edu">Education</h3>
+        <div class="edu reveal">
+          <img class="edu__logo" src="assets/logo-nus.svg" alt="National University of Singapore" />
+          <div>
+            <p class="edu__school" data-i18n="edu.nus">National University of Singapore</p>
+            <p class="edu__degree" data-i18n="edu.nus.degree">Master of Science in Biomedical Engineering</p>
+            <p class="xp__date" data-i18n="edu.nus.date">2024 – 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 项目 -->
+    <section class="section" id="projects">
+      <div class="section__inner">
+        <p class="section__index">02</p>
+        <h2 class="section__title reveal" data-i18n="projects.title">Projects</h2>
+
+        <!-- DepthScopy：上文下图（架构图为横向长图，通栏展示） -->
+        <article class="feature feature--banner reveal">
+          <div class="feature__text">
+            <h3 class="feature__name">DepthScopy</h3>
+            <p class="feature__affil">
+              <img src="assets/logo-nus.svg" alt="National University of Singapore" />
+              <img src="assets/logo-dhlab.png" alt="DHlab" />
+              <a class="feature__link" href="https://www.openaccess.thecvf.com/content/CVPR2026F/html/Shi_DepthScopy_Decoupling_Frequency_for_Endoscopic_Depth_Estimation_in_Sparsely-Textured_Regions_CVPRF_2026_paper.html" target="_blank" rel="noopener" data-i18n="label.paper">Paper ↗</a>
+            </p>
+            <p class="feature__subtitle" data-i18n="depthscopy.sub">Decoupling Frequency for Endoscopic Depth Estimation in Sparsely-Textured Regions</p>
+            <p class="feature__desc" data-i18n="depthscopy.desc">
+              We propose a framework centered on a gated wavelet dense prediction transform that
+              decomposes feature maps into directional spectral subbands with learnable weights,
+              selectively amplifying sparse edge signals while preserving robust geometric structure
+              in low-texture regions — surpassing previous state-of-the-art on C3VD and SimCol3D.
+            </p>
+            <p class="feature__meta"><strong data-i18n="label.authors">Authors</strong> Minghai Shi, Xiaoxian Zhang, Xiaoyue Liu, Fan Yang, Lei Li</p>
+          </div>
+          <div class="feature__media feature__media--arch">
+            <img src="assets/depthscopy-arch.png" alt="DepthScopy framework" />
+          </div>
+        </article>
+
+        <!-- La Forge：左文右 logo -->
+        <article class="feature feature--rev reveal">
+          <div class="feature__media feature__media--compare">
+            <figure>
+              <img src="assets/laforge-tiling-original.jpg" alt="Original 2x2 tiling" />
+              <figcaption data-i18n="laforge.cap.orig">Original (2×2)</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/laforge-tiling-seamless.jpg" alt="Seamless 2x2 tiling" />
+              <figcaption data-i18n="laforge.cap.seam">Seamless (2×2)</figcaption>
+            </figure>
+          </div>
+          <div class="feature__text">
+            <h3 class="feature__name">GenMatV2</h3>
+            <p class="feature__affil">
+              <img src="assets/ubisoft-logo.svg" alt="Ubisoft La Forge" />
+            </p>
+            <p class="feature__subtitle" data-i18n="laforge.sub">Research Internship — Game AI · 2025.10 – 2026.04</p>
+            <p class="feature__desc" data-i18n="laforge.desc">
+              Optimized game asset production by training customized DiT-based generative models,
+              implementing automated data curation and model quantization (seamless) to deliver
+              high-performance generation pipelines.
+            </p>
+            <p class="feature__meta"><strong data-i18n="label.role">Role</strong> <span data-i18n="xp.laforge.role">Research Student</span></p>
+            <p class="feature__meta"><strong data-i18n="label.focus">Focus</strong> <span data-i18n="laforge.kw">DiT Generative Models · Data Curation · Model Quantization</span></p>
+          </div>
+        </article>
+
+        <!-- A*STAR：纯文字卡片 -->
+        <article class="feature feature--text reveal">
+          <div class="feature__text">
+            <h3 class="feature__name">A*STAR</h3>
+            <p class="feature__affil">
+              <img src="assets/logo-astar-web.png" alt="A*STAR" />
+            </p>
+            <p class="feature__subtitle" data-i18n="astar.sub">Research Internship — Embodied AI · 2025.08 – 2025.10</p>
+            <p class="feature__desc" data-i18n="astar.desc">
+              Developed a multimodal 3D scene understanding framework for embodied AI,
+              integrating 2D visual priors into 3D segmentation model frameworks to enhance
+              interactive affordance perception.
+            </p>
+            <p class="feature__meta"><strong data-i18n="label.role">Role</strong> <span data-i18n="xp.astar.role">Algorithm Engineer Intern</span></p>
+            <p class="feature__meta"><strong data-i18n="label.focus">Focus</strong> <span data-i18n="astar.kw">3D Scene Understanding · Embodied AI · Multimodal Perception</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 动态 -->
+    <section class="section" id="news">
+      <div class="section__inner">
+        <p class="section__index">03</p>
+        <h2 class="section__title reveal" data-i18n="news.title">News</h2>
+
+        <ul class="list">
+          <li class="list__item reveal">
+            <span class="list__year">2026</span>
+            <div>
+              <p class="list__head" data-i18n="news1.head">DepthScopy accepted to CVPR 2026 Findings</p>
+              <p class="list__sub" data-i18n="news1.sub">Decoupling Frequency for Endoscopic Depth Estimation in Sparsely-Textured Regions</p>
+              <a class="feature__link" href="https://www.openaccess.thecvf.com/content/CVPR2026F/html/Shi_DepthScopy_Decoupling_Frequency_for_Endoscopic_Depth_Estimation_in_Sparsely-Textured_Regions_CVPRF_2026_paper.html" target="_blank" rel="noopener" data-i18n="label.paper">Paper ↗</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 联系 -->
+    <section class="section" id="contact">
+      <div class="section__inner">
+        <p class="section__index">04</p>
+        <h2 class="section__title reveal" data-i18n="contact.title">Contact</h2>
+        <p class="section__lead reveal" data-i18n="contact.lead">
+          Open to collaboration, research discussion, and opportunities in medical AI.
+        </p>
+        <div class="contact__links reveal">
+          <a href="https://www.linkedin.com/in/minghai-shi-096b381b2/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="mailto:shiminghai@pjlab.org.cn">shiminghai@pjlab.org.cn</a>
+          <a href="mailto:minghaishi@u.nus.edu">minghaishi@u.nus.edu</a>
+          <a href="mailto:648217423@qq.com">648217423@qq.com</a>
+        </div>
+        <footer class="footer">
+          <p data-i18n="footer.text">© 2026 Minghai Shi · Life speaks in patterns.</p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
