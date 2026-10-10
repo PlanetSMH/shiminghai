@@ -133,30 +133,3 @@ if (video) {
   });
 }
 
-// 浅色（方案 A）为永久默认；记住之后的选择
-if (localStorage.getItem("theme") === "dark") {
-  localStorage.setItem("theme", "light");
-}
-const toggle = document.getElementById("theme-toggle");
-const root = document.documentElement;
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "light") {
-  root.setAttribute("data-theme", "light");
-  toggle.textContent = "方案B";
-} else {
-  root.setAttribute("data-theme", "light");
-  localStorage.setItem("theme", "light");
-  toggle.textContent = "方案B";
-}
-toggle.addEventListener("click", () => {
-  const isLight = root.getAttribute("data-theme") === "light";
-  if (isLight) {
-    root.removeAttribute("data-theme");
-    localStorage.setItem("theme", "dark");
-    toggle.textContent = "方案A";
-  } else {
-    root.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light");
-    toggle.textContent = "方案B";
-  }
-});

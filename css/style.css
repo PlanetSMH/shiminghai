@@ -1,11 +1,11 @@
 /* ========== 基础 ========== */
 :root {
-  --bg: #000;
-  --bg-soft: #0a0a0b;
-  --fg: #f5f6f7;
-  --fg-dim: #9a9ea6;
-  --accent: #8fd8ff;
-  --line: rgba(255, 255, 255, 0.14);
+  --bg: #f6f6f7;
+  --bg-soft: #ffffff;
+  --fg: #0b0b0c;
+  --fg-dim: #5b5f66;
+  --accent: #0a7ec2;
+  --line: rgba(0, 0, 0, 0.16);
   --font-head: "Barlow Semi Condensed", "Archivo", -apple-system, sans-serif;
   --font-body: "Archivo", -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   --pad: clamp(1.25rem, 6vw, 6rem);
@@ -31,7 +31,7 @@ a { color: inherit; text-decoration: none; }
   justify-content: space-between;
   align-items: center;
   padding: 1.1rem var(--pad);
-  background: linear-gradient(to bottom, rgba(0,0,0,0.55), transparent);
+  background: linear-gradient(to bottom, rgba(255,255,255,0.75), transparent);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
@@ -99,15 +99,14 @@ section {
   width: 100%;
   height: calc(100% - 64px);
   object-fit: cover;
-  filter: invert(1) brightness(0.92) contrast(1.02);
-  opacity: 0.85;
+  opacity: 0.95;
 }
 .hero__overlay {
   position: absolute;
   top: 64px; left: 0; right: 0; bottom: 0;
   background:
-    linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.15) 100%),
-    linear-gradient(to top, rgba(0,0,0,0.9), transparent 30%);
+    linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.45) 45%, rgba(255,255,255,0.12) 100%),
+    linear-gradient(to top, rgba(255,255,255,0.95), transparent 30%);
 }
 .hero__content {
   position: relative;
@@ -214,7 +213,7 @@ section {
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 1.8rem 1.6rem;
-  background: rgba(255,255,255,0.02);
+  background: rgba(0,0,0,0.02);
   transition: transform 0.3s, border-color 0.3s;
 }
 .card:hover { transform: translateY(-4px); border-color: rgba(143,216,255,0.5); }
@@ -324,30 +323,7 @@ section {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
-/* ========== 方案 A：浅色主题 ========== */
-[data-theme="light"] {
-  --bg: #f6f6f7;
-  --bg-soft: #ffffff;
-  --fg: #0b0b0c;
-  --fg-dim: #5b5f66;
-  --accent: #0a7ec2;
-  --line: rgba(0, 0, 0, 0.16);
-}
-[data-theme="light"] .nav {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.75), transparent);
-}
-[data-theme="light"] .hero__video {
-  filter: none;
-  opacity: 0.95;
-}
-[data-theme="light"] .hero__overlay {
-  background:
-    linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.45) 45%, rgba(255,255,255,0.12) 100%),
-    linear-gradient(to top, rgba(255,255,255,0.95), transparent 30%);
-}
-[data-theme="light"] .card { background: rgba(0,0,0,0.02); }
-[data-theme="light"] .hero__scroll { border-color: rgba(0,0,0,0.25); }
-[data-theme="light"] .hero__scroll span { background: var(--fg-dim); }
+.hero__scroll { border-color: rgba(0,0,0,0.25); }
 
 /* ========== A/B 切换按钮 ========== */
 .theme-toggle {
@@ -498,8 +474,6 @@ section {
 }
 
 .xp__logo--tall { height: 76px; }
-/* 深色主题下单色（近黑）logo 反色，保持可见 */
-:root:not([data-theme="light"]) .xp__logo--mono { filter: invert(0.92); }
 .feature__media {
   background: #fff;
   border: 1px solid var(--line);
@@ -568,6 +542,4 @@ section {
   .feature--rev .feature__media { order: 0; }
   .feature--rev .feature__text { order: 1; }
 }
-
-[data-theme="light"] .feature__media { border-color: rgba(0,0,0,0.1); }
 
