@@ -259,7 +259,7 @@ section {
   font-family: var(--font-head);
   color: var(--accent);
   letter-spacing: 0.15em;
-  min-width: 3.2rem;
+  min-width: 4.6rem;
 }
 .list__head { font-size: 1.05rem; }
 .list__sub { color: var(--fg-dim); font-size: 0.88rem; margin-top: 0.2rem; }
@@ -428,9 +428,13 @@ section {
 }
 .xp__desc { color: var(--fg-dim); font-size: 0.88rem; margin-top: 0.35rem; max-width: 62ch; }
 
-/* 纯文字卡片：无媒体区，文字通栏 */
+/* 纯文字卡片：无媒体区，文字通栏；标题单行显示 */
 .feature--text { grid-template-columns: 1fr; }
-.feature--text .feature__text { max-width: 78ch; }
+.feature--text .feature__text { max-width: none; }
+.feature--text .feature__name {
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  white-space: nowrap;
+}
 
 /* ========== 项目：图文左右排 ========== */
 .feature {
@@ -451,22 +455,23 @@ section {
 .feature--banner .feature__subtitle { color: var(--fg-dim); }
 .feature__media--arch { padding: 0.75rem; }
 
-/* DepthScopy 作者单位 logo：白底小卡片，深浅主题都清晰 */
+/* 机构 logo 墙：无框、统一高度、轻半透明，悬浮加深 */
 .feature__affil {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
   margin-top: 0.9rem;
 }
 .feature__affil img {
-  height: 34px;
+  height: 36px;
   width: auto;
+  max-width: 210px;
   object-fit: contain;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 0.3rem 0.7rem;
+  opacity: 0.82;
+  transition: opacity 0.25s;
 }
+.feature__affil img:hover { opacity: 1; }
 /* Paper 链接跟在机构 logo 同一行右侧 */
 .feature__affil .feature__link {
   margin-top: 0;
@@ -537,9 +542,57 @@ section {
   transition: color 0.25s, border-color 0.25s;
 }
 .feature__link:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ========== 项目产出时间线（卡片内部） ========== */
+.outs {
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--line);
+}
+.outs__row {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 1.1rem;
+  padding: 0.15rem 0;
+}
+.outs__row + .outs__row { margin-top: 0.55rem; }
+/* 时间线圆点 */
+.outs__row::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.2rem - 5px);
+  top: 0.62em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.outs__date {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  min-width: 3.6rem;
+  flex-shrink: 0;
+}
+.outs__text { font-size: 0.88rem; color: var(--fg-dim); }
+.outs__text .feature__link { margin-top: 0; margin-left: 0.7rem; font-size: 0.82rem; }
+/* 奖状：限高展示 */
+.feature__media--cert img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+/* 动态里的链接行 */
+.list__links { display: flex; gap: 1.2rem; margin-top: 0.5rem; }
+.list__links .feature__link { margin-top: 0; font-size: 0.85rem; }
 @media (max-width: 860px) {
   .feature { grid-template-columns: 1fr; }
   .feature--rev .feature__media { order: 0; }
   .feature--rev .feature__text { order: 1; }
+  .feature--text .feature__name { white-space: normal; }
 }
 

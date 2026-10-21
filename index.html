@@ -58,7 +58,7 @@
         </p>
         <ul class="focus">
           <li class="reveal" data-i18n="about.i1">Multimodal AI-assisted decision-making in endoscopic surgery</li>
-          <li class="reveal" data-i18n="about.i2">Integrated multimodal intelligent screening &amp; diagnosis for cervical cancer</li>
+          <li class="reveal" data-i18n="about.i2">Integrated multimodal intelligent screening and diagnosis for cervical cancer</li>
           <li class="reveal" data-i18n="about.i3">Drug–dosage co-decision prediction and evolution models for metabolic comorbidities</li>
         </ul>
 
@@ -111,26 +111,76 @@
         <p class="section__index">02</p>
         <h2 class="section__title reveal" data-i18n="projects.title">Projects</h2>
 
-        <!-- DepthScopy：上文下图（架构图为横向长图，通栏展示） -->
-        <article class="feature feature--banner reveal">
+        <!-- 医学临床合作：各项目独立卡片，产出用卡内时间线 -->
+        <h3 class="block__label reveal" data-i18n="projects.clinical">Clinical Collaborations</h3>
+
+        <!-- 胃肠：上海 AI Lab × 仁济医院 -->
+        <article class="feature feature--text reveal">
           <div class="feature__text">
-            <h3 class="feature__name">DepthScopy</h3>
+            <h3 class="feature__name" data-i18n="clin.gi.name">Gastrointestinal Endoscopic Surgery AI</h3>
             <p class="feature__affil">
-              <img src="assets/logo-nus.svg" alt="National University of Singapore" />
-              <img src="assets/logo-dhlab.png" alt="DHlab" />
-              <a class="feature__link" href="https://www.openaccess.thecvf.com/content/CVPR2026F/html/Shi_DepthScopy_Decoupling_Frequency_for_Endoscopic_Depth_Estimation_in_Sparsely-Textured_Regions_CVPRF_2026_paper.html" target="_blank" rel="noopener" data-i18n="label.paper">Paper ↗</a>
+              <img src="assets/logo-shailab.png" alt="Shanghai AI Laboratory" />
+              <img src="assets/logo-renji.png" alt="Renji Hospital" />
             </p>
-            <p class="feature__subtitle" data-i18n="depthscopy.sub">Decoupling Frequency for Endoscopic Depth Estimation in Sparsely-Textured Regions</p>
-            <p class="feature__desc" data-i18n="depthscopy.desc">
-              We propose a framework centered on a gated wavelet dense prediction transform that
-              decomposes feature maps into directional spectral subbands with learnable weights,
-              selectively amplifying sparse edge signals while preserving robust geometric structure
-              in low-texture regions — surpassing previous state-of-the-art on C3VD and SimCol3D.
-            </p>
-            <p class="feature__meta"><strong data-i18n="label.authors">Authors</strong> Minghai Shi, Xiaoxian Zhang, Xiaoyue Liu, Fan Yang, Lei Li</p>
+            <p class="feature__desc" data-i18n="clin.gi.goal">Goal: multimodal AI-assisted decision-making in endoscopic surgery.</p>
+            <p class="feature__meta"><strong data-i18n="label.period">Period</strong> <span data-i18n="clin.gi.period">2026.08 – Present</span></p>
           </div>
-          <div class="feature__media feature__media--arch">
-            <img src="assets/depthscopy-arch.png" alt="DepthScopy framework" />
+        </article>
+
+        <!-- 代谢：上海 AI Lab × 瑞金医院 -->
+        <article class="feature feature--text reveal">
+          <div class="feature__text">
+            <h3 class="feature__name" data-i18n="clin.mt.name">World-Model Prediction for Metabolic Comorbidities</h3>
+            <p class="feature__affil">
+              <img src="assets/logo-shailab.png" alt="Shanghai AI Laboratory" />
+              <img src="assets/logo-ruijin.png" alt="Ruijin Hospital" />
+            </p>
+            <p class="feature__desc" data-i18n="clin.mt.goal">Goal: drug–dosage co-decision prediction and evolution models for metabolic comorbidities.</p>
+            <p class="feature__meta"><strong data-i18n="label.period">Period</strong> <span data-i18n="clin.mt.period">2026.06 – Present</span></p>
+          </div>
+        </article>
+
+        <!-- 宫颈：上海 AI Lab × 复旦妇产科医院 -->
+        <article class="feature feature--text reveal">
+          <div class="feature__text">
+            <h3 class="feature__name" data-i18n="clin.cv.name">Cervical Cancer Screening and Diagnosis</h3>
+            <p class="feature__affil">
+              <img src="assets/logo-shailab.png" alt="Shanghai AI Laboratory" />
+              <img src="assets/logo-fudan-og.png" alt="Obstetrics and Gynecology Hospital of Fudan University" />
+            </p>
+            <p class="feature__desc" data-i18n="clin.cv.goal">Goal: an integrated multimodal intelligent screening and diagnosis system for cervical cancer.</p>
+            <p class="feature__meta"><strong data-i18n="label.period">Period</strong> <span data-i18n="clin.cv.period">2026.05 – Present</span></p>
+            <!-- 产出时间线：左日期右成就，可追加 -->
+            <div class="outs">
+              <div class="outs__row">
+                <span class="outs__date">2026.08</span>
+                <p class="outs__text">
+                  <span data-i18n="clin.cv.award">Second Prize, 1st National Digital-Intelligent Health Competition</span>
+                  <a class="feature__link" href="https://www.ai4health.chim.org.cn/Portal/news/news_detail/id/37.html" target="_blank" rel="noopener" data-i18n="label.report">Report ↗</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MultiPhys-EF：EchoRisk-MICCAI 2026 挑战赛，左文右奖状 -->
+        <article class="feature feature--rev reveal">
+          <div class="feature__media feature__media--cert">
+            <img src="assets/echorisk-cert.jpg" alt="EchoRisk-MICCAI 2026 Second Place certificate" />
+          </div>
+          <div class="feature__text">
+            <h3 class="feature__name" data-i18n="echorisk.name">Cardiac Function Estimation</h3>
+            <p class="feature__affil">
+              <img src="assets/logo-shailab.png" alt="Shanghai AI Laboratory" />
+              <img src="assets/logo-nus.svg" alt="National University of Singapore" />
+              <img src="assets/logo-xjtu-fah.png" alt="The First Affiliated Hospital of Xi'an Jiaotong University" />
+              <a class="feature__link" href="https://echorisk-miccai.github.io/" target="_blank" rel="noopener" data-i18n="label.website">Website ↗</a>
+              <a class="feature__link" href="https://papers.miccai.org/miccai-2026-sat/paper/EchoRisk2026_009.pdf" target="_blank" rel="noopener" data-i18n="label.paper">Paper ↗</a>
+            </p>
+            <p class="feature__subtitle" data-i18n="echorisk.sub">EchoRisk-MICCAI 2026 Challenge · Task 1: LVEF Estimation</p>
+            <p class="feature__desc" data-i18n="echorisk.desc">Decorrelated multi-signal fusion for LVEF estimation in cardiotoxicity surveillance.</p>
+            <p class="feature__meta"><strong data-i18n="label.period">Period</strong> <span data-i18n="echorisk.period">2026.05 – 2026.08</span></p>
+            <p class="feature__meta"><strong data-i18n="label.award">Award</strong> <span data-i18n="echorisk.award">Second Prize</span></p>
           </div>
         </article>
 
@@ -162,8 +212,35 @@
           </div>
         </article>
 
-        <!-- A*STAR：纯文字卡片 -->
-        <article class="feature feature--text reveal">
+        <!-- DepthScopy：上文下图（架构图为横向长图，通栏展示） -->
+        <article class="feature feature--banner reveal">
+          <div class="feature__text">
+            <h3 class="feature__name">DepthScopy</h3>
+            <p class="feature__affil">
+              <img src="assets/logo-nus.svg" alt="National University of Singapore" />
+              <img src="assets/logo-dhlab.png" alt="DHlab" />
+              <a class="feature__link" href="https://www.openaccess.thecvf.com/content/CVPR2026F/html/Shi_DepthScopy_Decoupling_Frequency_for_Endoscopic_Depth_Estimation_in_Sparsely-Textured_Regions_CVPRF_2026_paper.html" target="_blank" rel="noopener" data-i18n="label.paper">Paper ↗</a>
+            </p>
+            <p class="feature__subtitle" data-i18n="depthscopy.sub">Decoupling Frequency for Endoscopic Depth Estimation in Sparsely-Textured Regions</p>
+            <p class="feature__desc" data-i18n="depthscopy.desc">
+              We propose a framework centered on a gated wavelet dense prediction transform that
+              decomposes feature maps into directional spectral subbands with learnable weights,
+              selectively amplifying sparse edge signals while preserving robust geometric structure
+              in low-texture regions — surpassing previous state-of-the-art on C3VD and SimCol3D.
+            </p>
+            <p class="feature__meta"><strong data-i18n="label.period">Period</strong> <span data-i18n="depthscopy.period">2025.03 – 2026.02</span></p>
+            <p class="feature__meta"><strong data-i18n="label.authors">Authors</strong> Minghai Shi, Xiaoxian Zhang, Xiaoyue Liu, Fan Yang, Lei Li</p>
+          </div>
+          <div class="feature__media feature__media--arch">
+            <img src="assets/depthscopy-arch.png" alt="DepthScopy framework" />
+          </div>
+        </article>
+
+        <!-- A*STAR：左文右图（Articulate3D 挑战赛榜单） -->
+        <article class="feature feature--rev reveal">
+          <div class="feature__media">
+            <img src="assets/astar-articulate3d.jpg" alt="Articulate3D Challenge leaderboard — team astar ranked 2nd" />
+          </div>
           <div class="feature__text">
             <h3 class="feature__name">A*STAR</h3>
             <p class="feature__affil">
@@ -177,8 +254,20 @@
             </p>
             <p class="feature__meta"><strong data-i18n="label.role">Role</strong> <span data-i18n="xp.astar.role">Algorithm Engineer Intern</span></p>
             <p class="feature__meta"><strong data-i18n="label.focus">Focus</strong> <span data-i18n="astar.kw">3D Scene Understanding · Embodied AI · Multimodal Perception</span></p>
+            <p class="feature__meta"><strong data-i18n="label.award">Award</strong> <span data-i18n="astar.awardmeta">2nd Place — Articulate3D Challenge</span></p>
+            <!-- 产出时间线 -->
+            <div class="outs">
+              <div class="outs__row">
+                <span class="outs__date">2025.10</span>
+                <p class="outs__text">
+                  <span data-i18n="astar.award">2nd Place — Articulate3D Challenge, OpenSUN3D Workshop @ ICCV 2025</span>
+                  <a class="feature__link" href="https://insait-institute.github.io/articulate3d.github.io/challenge_iccv25.html" target="_blank" rel="noopener" data-i18n="label.challenge">Challenge ↗</a>
+                </p>
+              </div>
+            </div>
           </div>
         </article>
+
       </div>
     </section>
 
@@ -190,11 +279,39 @@
 
         <ul class="list">
           <li class="list__item reveal">
-            <span class="list__year">2026</span>
+            <span class="list__year">2026.10</span>
+            <div>
+              <p class="list__head" data-i18n="news2.head">Second Prize — EchoRisk-MICCAI 2026 Challenge (Task 1: LVEF Estimation)</p>
+              <p class="list__links">
+                <a class="feature__link" href="https://papers.miccai.org/miccai-2026-sat/paper/EchoRisk2026_009.pdf" target="_blank" rel="noopener" data-i18n="label.paper">Paper ↗</a>
+                <a class="feature__link" href="https://www.jdyfy.com/info/1241/208411.htm" target="_blank" rel="noopener" data-i18n="label.report">Report ↗</a>
+              </p>
+            </div>
+          </li>
+          <li class="list__item reveal">
+            <span class="list__year">2026.08</span>
+            <div>
+              <p class="list__head" data-i18n="news3.head">Cervical cancer screening project — Second Prize, 1st National Digital-Intelligent Health Competition</p>
+              <p class="list__links">
+                <a class="feature__link" href="https://www.ai4health.chim.org.cn/Portal/news/news_detail/id/37.html" target="_blank" rel="noopener" data-i18n="label.report">Report ↗</a>
+              </p>
+            </div>
+          </li>
+          <li class="list__item reveal">
+            <span class="list__year">2026.02</span>
             <div>
               <p class="list__head" data-i18n="news1.head">DepthScopy accepted to CVPR 2026 Findings</p>
               <p class="list__sub" data-i18n="news1.sub">Decoupling Frequency for Endoscopic Depth Estimation in Sparsely-Textured Regions</p>
               <a class="feature__link" href="https://www.openaccess.thecvf.com/content/CVPR2026F/html/Shi_DepthScopy_Decoupling_Frequency_for_Endoscopic_Depth_Estimation_in_Sparsely-Textured_Regions_CVPRF_2026_paper.html" target="_blank" rel="noopener" data-i18n="label.paper">Paper ↗</a>
+            </div>
+          </li>
+          <li class="list__item reveal">
+            <span class="list__year">2025.10</span>
+            <div>
+              <p class="list__head" data-i18n="news4.head">2nd Place — Articulate3D Challenge, OpenSUN3D Workshop @ ICCV 2025</p>
+              <p class="list__links">
+                <a class="feature__link" href="https://insait-institute.github.io/articulate3d.github.io/challenge_iccv25.html" target="_blank" rel="noopener" data-i18n="label.challenge">Challenge ↗</a>
+              </p>
             </div>
           </li>
         </ul>
